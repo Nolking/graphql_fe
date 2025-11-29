@@ -1,6 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import { useCounterStore } from './stores/counter'
+const counterStore = useCounterStore()
 </script>
 
 <template>
@@ -9,6 +11,12 @@ import TheWelcome from './components/TheWelcome.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <div>
+        Now try counter
+        <h2 class="green">{{ counterStore.count }}</h2>
+        <h2 class="green">{{ counterStore.doubleCount }}</h2>
+        <button @click="counterStore.increment">Increment Button</button>
+      </div>
     </div>
   </header>
 
