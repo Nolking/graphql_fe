@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import { useCounterStore } from './stores/counter'
+import CountryList from './components/CountryList.vue'
 const counterStore = useCounterStore()
 </script>
 
@@ -11,6 +12,7 @@ const counterStore = useCounterStore()
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <CountryList />
       <div>
         Now try counter
         <h2 class="green">{{ counterStore.count }}</h2>
